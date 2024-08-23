@@ -1,0 +1,23 @@
+---
+title: "cwabs"
+author: "IMS"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+In the Quarto doc, create an exploratory (unfinalized) plot of fiddler crab carapace widths observed at the different latitudes
+
+```{r}
+library(here)
+library(tidyverse)
+library(lterdatasampler)
+```
+
+```{r}
+crab <- pie_crab
+
+ggplot(crab, aes(latitude, size))+
+  geom_point()
+```
+
